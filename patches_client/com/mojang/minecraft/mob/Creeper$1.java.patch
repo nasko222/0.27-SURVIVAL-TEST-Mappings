@@ -1,0 +1,11 @@
+--- a/com/mojang/minecraft/mob/Creeper$1.java
++++ b/com/mojang/minecraft/mob/Creeper$1.java
+@@ -12,7 +12,7 @@
+ 		this.this$0 = creeper1;
+ 	}
+ 
+-	protected final boolean attack(Entity entity1) {
++	public final boolean attack(Entity entity1) {
+ 		if(!super.attack(entity1)) {
+ 			return false;
+ 		} else {

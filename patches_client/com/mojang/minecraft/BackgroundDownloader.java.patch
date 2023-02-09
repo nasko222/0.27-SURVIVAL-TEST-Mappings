@@ -1,0 +1,19 @@
+--- a/com/mojang/minecraft/BackgroundDownloader.java
++++ b/com/mojang/minecraft/BackgroundDownloader.java
+@@ -4,6 +4,7 @@
+ import java.io.DataOutputStream;
+ import java.io.File;
+ import java.io.FileOutputStream;
++import java.io.IOException;
+ import java.net.URL;
+ 
+ public final class BackgroundDownloader extends Thread {
+@@ -25,7 +26,7 @@
+ 		// $FF: Couldn't be decompiled
+ 	}
+ 
+-	private void a(URL uRL1, File file2) {
++	private void a(URL uRL1, File file2) throws IOException {
+ 		System.out.println("Downloading " + uRL1);
+ 		byte[] b3 = new byte[4096];
+ 		DataInputStream dataInputStream5 = new DataInputStream(uRL1.openStream());

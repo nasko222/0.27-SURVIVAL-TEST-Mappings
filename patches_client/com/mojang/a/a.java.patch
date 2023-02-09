@@ -1,0 +1,22 @@
+--- a/com/mojang/a/a.java
++++ b/com/mojang/a/a.java
+@@ -3,8 +3,10 @@
+ import com.mojang.minecraft.net.ConnectionManager;
+ import com.mojang.minecraft.net.Packet;
+ 
++import java.io.IOException;
+ import java.net.InetSocketAddress;
+ import java.net.Socket;
++import java.net.SocketException;
+ import java.nio.ByteBuffer;
+ import java.nio.channels.SocketChannel;
+ import java.util.Arrays;
+@@ -19,7 +21,7 @@
+ 	private boolean g = false;
+ 	private byte[] h = new byte[64];
+ 
+-	public a(String string1, int i2) {
++	public a(String string1, int i2) throws IOException {
+ 		this.b.connect(new InetSocketAddress(string1, i2));
+ 		this.b.configureBlocking(false);
+ 		System.currentTimeMillis();
